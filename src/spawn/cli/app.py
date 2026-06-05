@@ -22,7 +22,13 @@ def create() -> None:
     config = get_project_config()
 
     generator = ProjectGenerator()
-    generator.generate(config)
+    try:
+     generator.generate(config)
+
+    except Exception as e:
+      console.print(
+        f"[red]❌ {e}[/red]"
+    )
 
 
 @app.command()

@@ -1,0 +1,2 @@
+class SpawnError(Exception):
+    pass
