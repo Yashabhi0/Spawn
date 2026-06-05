@@ -1,12 +1,24 @@
 import typer
+
+from rich.panel import Panel
+
 from spawn.cli.prompts import get_project_config
 from spawn.generators.project_generator import ProjectGenerator
+from spawn.utils.console import console
 
 app = typer.Typer()
 
 
 @app.command()
 def create() -> None:
+
+    console.print(
+        Panel.fit(
+            "Create development environments in seconds",
+            title="🚀 Spawn",
+        )
+    )
+
     config = get_project_config()
 
     generator = ProjectGenerator()
