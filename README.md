@@ -2,7 +2,7 @@
 
 #  Spawn
 
-**Stop repeating yourself. Start building.**
+> Eliminate repetitive project setup. Go from zero to a fully structured dev environment in seconds.
 
 Spawn is a local CLI tool that sets up a complete Python project structure in seconds — directories, boilerplate files, Git initialization, and a virtual environment — all from a single command with a beautiful interactive prompt.
 
