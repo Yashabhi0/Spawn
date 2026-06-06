@@ -4,7 +4,8 @@
 
 > Eliminate repetitive project setup. Go from zero to a fully structured dev environment in seconds.
 
-Spawn is a local CLI tool that sets up a complete Python project structure in seconds — directories, boilerplate files, Git initialization, and a virtual environment — all from a single command with a beautiful interactive prompt.
+Spawn is a local CLI tool that transforms one command into a complete Python project foundation directories, Git, and a virtual env set up automatically, so you can start building immediately.
+
 
 [![Python](https://img.shields.io/badge/Python-3.12+-blue?style=flat-square)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen?style=flat-square)]()
