@@ -1,6 +1,4 @@
-import pytest
 
-from spawn.core.exceptions import SpawnError
 
 def test_fastapi_template():
     template = FastAPITemplate()
