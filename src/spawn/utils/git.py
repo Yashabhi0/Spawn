@@ -114,3 +114,9 @@ def remote_exists(
 
     except subprocess.CalledProcessError:
         return False
+
+def is_git_repository(
+    project_path: Path,
+) -> bool:
+    """Check if the given path is inside a Git repository."""
+    return (project_path / ".git").is_dir()
