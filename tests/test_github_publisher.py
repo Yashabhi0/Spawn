@@ -9,6 +9,7 @@ from spawn.github.exceptions import (
 from spawn.github.publisher import (
     GitHubPublisher,
 )
+from spawn.core.exceptions import SpawnError
 
 
 def test_missing_project_path():
@@ -122,3 +123,27 @@ def test_publish_success(
     mock_push_origin_main.assert_called_once_with(
         tmp_path
     )
+
+
+@patch("spawn.github.publisher.is_git_repository")
+@patch("spawn.github.publisher.remote_exists")
+@patch("spawn.github.publisher.add_all")
+def test_git_not_installed_raises_error(
+    mock_add_all,
+    mock_remote_exists,
+    mock_is_git_repository,
+    tmp_path,
+):
+    mock_is_git_repository.return_value = True
+    mock_remote_exists.return_value = False
+    mock_add_all.side_effect = SpawnError(
+        "Git is not installed or not available in PATH."
+    )
+
+    publisher = GitHubPublisher()
+
+    with pytest.raises(GitHubPublishError):
+        publisher.publish(
+            tmp_path,
+            "https://github.com/user/repo",
+        )
