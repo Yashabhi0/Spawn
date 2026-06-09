@@ -45,10 +45,12 @@ It's repetitive. It's error-prone. It's inconsistent. And you haven't even writt
 |---|---|
 |  **Interactive CLI** | Beautiful prompt-driven setup powered by [Rich](https://github.com/Textualize/rich) |
 |  **4 Project Templates** | Python Script, FastAPI, Data Science, ML Project |
-|  **Git Integration** | Optionally runs `git init` automatically |
+|  **Git Integration** | Optionally runs `git init` and publishes to GitHub |
 |  **uv Integration** | Runs `uv init --bare` and `uv venv` for you |
 |  **Smart Next Steps** | Shows the exact commands to run after setup |
 |  **Error Handling** | Clear, readable messages if Git or uv aren't found |
+| 🥷 **GitHub Publishing** | Connects your project to an existing GitHub repo and pushes the initial commit |
+| 🩺 **spawn doctor** | Checks your dev environment and scores it out of 100 |
 
 ---
 
@@ -136,8 +138,37 @@ When it's done, you'll see a clean summary and exactly what to do next:
 
 ```bash
 spawn version
-# → Spawn v0.1.0
+# → Spawn v0.2.0
 ```
+
+---
+
+### Publish to GitHub
+
+After project creation, if Git was enabled, Spawn will ask:
+
+```
+Publish to GitHub? [y/N]:
+```
+
+Paste your existing empty GitHub repository URL:
+
+```
+Repository URL: https://github.com/your-username/my-project
+```
+
+Spawn will automatically:
+- Stage all files (`git add .`)
+- Create the initial commit
+- Set the branch to `main`
+- Add the remote origin
+- Push to GitHub
+
+```
+🚀 Published successfully!
+```
+
+> The repository must already exist on GitHub. Spawn connects to it — it does not create it.
 
 ---
 
@@ -221,6 +252,25 @@ my-project/
 
 ---
 
+### Check your environment
+
+```bash
+spawn doctor
+```
+
+Spawn scans your dev environment and gives it a score out of 100:
+
+```
+╭─────── 🩺 Spawn Doctor ───────╮
+│  Python        ✓ 3.12.3       │
+│  uv            ✓ 0.4.1        │
+│  Git           ✓ 2.43.0       │
+│  Score         95 / 100       │
+╰───────────────────────────────╯
+```
+
+---
+
 ## Examples
 
 ```bash
@@ -253,7 +303,7 @@ All tests should pass. If they don't, please [open an issue](https://github.com/
 
 Here's what's planned next. Contributions welcome on any of these!
 
-- [ ] **GitHub API integration** — create and push to a remote repo automatically
+- [x] **GitHub publishing** — connect and push to an existing GitHub repo (v0.2.0)
 - [ ] **Project templates marketplace** — community-contributed templates
 - [ ] **Docker support** — generate `Dockerfile` and `docker-compose.yml`
 - [ ] **Makefile support** — common task automation out of the box
