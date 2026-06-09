@@ -49,8 +49,8 @@ It's repetitive. It's error-prone. It's inconsistent. And you haven't even writt
 |  **uv Integration** | Runs `uv init --bare` and `uv venv` for you |
 |  **Smart Next Steps** | Shows the exact commands to run after setup |
 |  **Error Handling** | Clear, readable messages if Git or uv aren't found |
-| 🥷 **GitHub Publishing** | Connects your project to an existing GitHub repo and pushes the initial commit |
-| 🩺 **spawn doctor** | Checks your dev environment and scores it out of 100 |
+|  **GitHub Publishing** | Connects your project to an existing GitHub repo and pushes the initial commit |
+|  **spawn doctor** | Checks your dev environment and scores it out of 100 |
 
 ---
 
