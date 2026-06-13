@@ -98,13 +98,25 @@ def version():
 
 
 @app.command()
-def doctor():
-    """Check project health and best practices."""
-    from spawn.utils.doctor import (
-        run_health_check,
+def doctor(
+    path: str = typer.Argument(
+        default=".",
+        help="Path to the project directory to check. Defaults to current directory.",
     )
+) -> None:
+    """Check the health of a project directory."""
+    from pathlib import Path
 
-    run_health_check()
+    from spawn.utils.doctor import run_health_check
+
+    project_path = Path(path).resolve()
+    if not project_path.exists():
+        console.print(f"[red]❌ Path does not exist: {project_path}[/red]")
+        raise typer.Exit(1)
+    if not project_path.is_dir():
+        console.print(f"[red]❌ Path is not a directory: {project_path}[/red]")
+        raise typer.Exit(1)
+    run_health_check(project_path)
 
 
 def main():
