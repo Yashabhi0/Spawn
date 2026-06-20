@@ -2,33 +2,36 @@
 
 # Spawn
 
-> One command. Full project. Ready to build.
+> You shouldn't need 7 commands to start a project.
 
 [![Python](https://img.shields.io/badge/Python-3.12+-blue?style=flat-square)](https://python.org)
 [![Tests](https://img.shields.io/badge/Tests-Passing-brightgreen?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 [![uv](https://img.shields.io/badge/Powered%20by-uv-orange?style=flat-square)](https://github.com/astral-sh/uv)
 
+![Spawn Preview](assets/preview.png)
+
 </div>
 
 ---
 
-You know the drill — `mkdir`, `cd`, `git init`, `python -m venv`, `source .venv/activate`...
-before you've written a single line of real code.
+`mkdir`. `cd`. `git init`. `python -m venv`. `source .venv/activate`. `touch .gitignore`...
 
-**Spawn replaces all of that with:**
+And you still haven't written a single line of actual code.
+
+**Spawn does all of that in one command — and it looks good doing it.**
 
 ```bash
 spawn create
 ```
 
-Pick a template, answer two prompts, and you're in a fully structured project with Git and a virtual environment already set up.
+Pick a template. Answer two questions. Walk into a ready-to-build project.
 
 ---
 
-## Get Started
+## Try It
 
-**Prerequisites:** Python 3.12+, [uv](https://github.com/astral-sh/uv), Git
+**You'll need:** Python 3.12+, [uv](https://github.com/astral-sh/uv), Git
 
 ```bash
 git clone https://github.com/Abhiix0/Spawn.git
@@ -37,20 +40,27 @@ uv sync
 uv tool install .
 ```
 
-Then just run `spawn create` — it'll show you what to do next.
+Then run `spawn create` and see what happens.
 
 ---
 
-## What's Inside
+## What Spawn Sets Up
 
-4 project templates. An interactive prompt. Smart next-step hints after every setup.
+No spoilers on the full output — but after one command you'll have:
 
-There's also a roadmap with some things in the works — GitHub integration, Docker support, a template marketplace. Check the repo if you're curious or want to contribute.
+- A project structure that actually makes sense
+- Git initialized (if you want it)
+- A virtual environment ready to go
+- The exact next commands printed for you — no guessing
+
+There are 4 templates. You'll figure out which one fits.
 
 ---
 
-<div align="center">
+## What's Coming
 
-**[⭐ Star on GitHub](https://github.com/Abhiix0/Spawn)** · **[🐛 Report a Bug](https://github.com/Abhiix0/Spawn/issues)** · **[💡 Request a Feature](https://github.com/Abhiix0/Spawn/issues)**
+Some things are already in the works. Clone the repo and check the roadmap — there might be something you want to build.
 
-</div>
+---
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
