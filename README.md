@@ -44,23 +44,4 @@ Then run `spawn create` and see what happens.
 
 ---
 
-## What Spawn Sets Up
-
-No spoilers on the full output — but after one command you'll have:
-
-- A project structure that actually makes sense
-- Git initialized (if you want it)
-- A virtual environment ready to go
-- The exact next commands printed for you — no guessing
-
-There are 4 templates. You'll figure out which one fits.
-
----
-
-## What's Coming
-
-Some things are already in the works. Clone the repo and check the roadmap — there might be something you want to build.
-
----
-
 [![MIT License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
