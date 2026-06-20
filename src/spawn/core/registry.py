@@ -2,6 +2,7 @@ from spawn.templates.python_script import PythonScriptTemplate
 from spawn.templates.fastapi import FastAPITemplate
 from spawn.templates.data_science import DataScienceTemplate
 from spawn.templates.ml_project import MLProjectTemplate
+from spawn.templates.base import BaseTemplate
 
 
 TEMPLATES = {
@@ -12,7 +13,7 @@ TEMPLATES = {
 }
 
 
-def get_template(template_name: str):
+def get_template(template_name: str) -> BaseTemplate | None:
     template_class = TEMPLATES.get(template_name)
 
     if template_class is None:
